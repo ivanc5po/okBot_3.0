@@ -62,7 +62,7 @@ wd = webdriver.Firefox(options=option)
 
 ######################################################  TradingView 網址請複製我的圖表並開啟分享功能，再將複製後的網址貼到這裡
 
-wd.get('https://tw.tradingview.com/chart/bLOm64iW/') #  ANTUSDT 交易對 [TradingView]
+wd.get('https://tw.tradingview.com/chart/bLOm64iW/')  # ANTUSDT 交易對 [TradingView]
 
 ######################################################
 
