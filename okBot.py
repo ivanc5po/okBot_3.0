@@ -142,7 +142,7 @@ while True:
                         elif bs == 2:
                                 buy_var += 1
                                 sell_var = 0
-                if sell_var == 30:
+                if sell_var == 300:
                         r1 = tradeAPI.close_positions(coin, 'cross', posSide="long")                                                              # 平倉
                         accountAPI.set_leverage(instId=coin, lever=str(m), mgnMode='cross')                                                       # 設定合約倍數
                         result = tradeAPI.place_order(instId=coin, tdMode='cross', side='sell', ordType='market', sz=str(num), posSide="short")   # 開空倉
@@ -150,7 +150,7 @@ while True:
                                 text += "做空 "+str(price) + "\n"
                                 bs2 = bs
                                 sell_var = 0
-                if buy_var == 30:
+                if buy_var == 300:
                         r1 = tradeAPI.close_positions(coin, 'cross', posSide="short")                                                             # 平倉
                         accountAPI.set_leverage(instId=coin, lever=str(m), mgnMode='cross')                                                       # 設定合約倍數
                         result = tradeAPI.place_order(instId=coin, tdMode='cross', side='buy', ordType='market', sz=str(num), posSide="long")     # 開多倉
