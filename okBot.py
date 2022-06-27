@@ -6,7 +6,7 @@ OKX交易所 python 永續合約 全自動交易程式
 
 使用 ANTUSDT 一小時級別交易對 Laguerre濾波 疊加 SuperTrend指標
 
-作者 : 某位窮高中生
+作者 : ivan [某位窮高中生]
 """
 
 import json
