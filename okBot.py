@@ -162,7 +162,7 @@ while True:
                 if re == 30:
                     wd.refresh()    # 重載網頁
 
-                    total = float(str(fundingAPI.get_asset_valuation(ccy = 'USDT')).split(", ")[4].split("'")[3])-218263.75*int(flag)  # 計算
+                    total = float(str(fundingAPI.get_asset_valuation(ccy = 'USDT')).split(", ")[4].split("'")[3])-218263.75*int(flag)  # 計算交易帳戶資產
                     re = 0
                 time.sleep(1)
         except:
