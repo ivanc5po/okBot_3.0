@@ -143,17 +143,17 @@ while True:
                                 buy_var += 1
                                 sell_var = 0
                 if sell_var == 1:
-                        r1 = tradeAPI.close_positions(coin, 'cross', posSide="long")                                                                            # 平倉
-                        accountAPI.set_leverage(instId=coin, lever=str(m), mgnMode='cross')                                                                     # 設定合約倍數
-                        result = tradeAPI.place_order(instId=coin, tdMode='cross', side='sell', ordType='market', sz=str(num), posSide="short")      # 開空倉
+                        r1 = tradeAPI.close_positions(coin, 'cross', posSide="long")                                                              # 平倉
+                        accountAPI.set_leverage(instId=coin, lever=str(m), mgnMode='cross')                                                       # 設定合約倍數
+                        result = tradeAPI.place_order(instId=coin, tdMode='cross', side='sell', ordType='market', sz=str(num), posSide="short")   # 開空倉
                         if "'code': '0'" in str(result):
                                 text += "做空 "+str(price) + "\n"
                                 bs2 = bs
                                 sell_var = 0
                 if buy_var == 1:
-                        r1 = tradeAPI.close_positions(coin, 'cross', posSide="short")                                                                           # 平倉
-                        accountAPI.set_leverage(instId=coin, lever=str(m), mgnMode='cross')                                                                     # 設定合約倍數
-                        result = tradeAPI.place_order(instId=coin, tdMode='cross', side='buy', ordType='market', sz=str(num), posSide="long")        # 開多倉
+                        r1 = tradeAPI.close_positions(coin, 'cross', posSide="short")                                                             # 平倉
+                        accountAPI.set_leverage(instId=coin, lever=str(m), mgnMode='cross')                                                       # 設定合約倍數
+                        result = tradeAPI.place_order(instId=coin, tdMode='cross', side='buy', ordType='market', sz=str(num), posSide="long")     # 開多倉
                         if "'code': '0'" in str(result):
                                 text += "做多 "+str(price) + "\n"
                                 bs2 = bs
