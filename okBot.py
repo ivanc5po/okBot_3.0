@@ -26,7 +26,7 @@ import os
 
 start_time = time.time()
 
-os.system("clear")
+os.system("clear") # windows系統請改 os.system("cls")
 
 st = 0
 flag = '0'
@@ -84,7 +84,7 @@ while True:
         try:
                 coin = str(wd.title).split()[0].replace("USDT", "")+"-USDT-SWAP"
                 price = float(str(wd.title).split()[1])
-                os.system("clear")
+                os.system("clear")  # windows系統請改 os.system("cls")
                 print(text)
                 print("價格 : "+str(price)+"\n餘額 : "+str(total))
                 image = wd.find_element_by_xpath("/html/body/div[2]/div[1]/div/div[1]/div/table/tr[1]/td[2]/div/canvas[2]")
